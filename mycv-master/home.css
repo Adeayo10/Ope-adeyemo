@@ -1,4 +1,7 @@
 /*  SECTIONS  */
+body{
+  box-sizing: border-box;
+}
 .section {
 	clear: both;
 	padding: 0px;
@@ -26,46 +29,28 @@
 .span_6_of_7 {
   	width: 85.64%;
 }
-
 .span_5_of_7 {
   	width: 71.28%;
 }
-
 .span_4_of_7 {
   	width: 60%;
 }
-
-.span_12_of_7 {
-  width: 70%;
-  border:5px solid white;
-  margin-right:10%;
-  margin-left: 10%;
-}
-@media screen and (max-width: 600px) {
-  
-}
-    
-
 .span_3_of_7 {
   	width: 45%;
 }
-
 .span_2_of_7 {
   	width: 30%;
 }
-
 .span_1_of_7 {
     width: 80%;
     margin-right:10%;
     margin-left: 10%;
 }
-
 /*  GO FULL WIDTH BELOW 480 PIXELS */
 @media only screen and (max-width: 480px) {
 	.col {  margin: 1% 0 1% 0%; }
 	.span_1_of_7, .span_2_of_7, .span_3_of_7, .span_4_of_7, .span_5_of_7, .span_6_of_7, .span_7_of_7 { width: 100%; }
 }
-
 .topnav {
   background-color: #333;
   overflow: hidden;
@@ -122,15 +107,30 @@
   }
 }
 #responsive {
-  min-height:50px;
-  display: flexbox;
-  float: left;
-  margin-left:2.5%;
-  margin-right:2.5%;
+  height:300px;
+  text-align: center;
+  width:40vw;
+  float:left;
+  margin:2.5% 2.5%;
+  background-color:whitesmoke;
+  border:1px solid whitesmoke;
+  overflow: hidden; ;
 }
+#responsive:hover{
+  min-height: 600px;
+  display: inline;
+}
+#image{
+  width:20vw;
+  height:100px;
+  margin:5% 5px;
+}
+
 .responsive {
   max-width: 100%; 
+  margin:25px;
   height: auto;
+  
 }
 @media screen and (min-width: 400px) and (max-width:500px) {
   #responsive{
@@ -138,26 +138,107 @@
     clear:both;
   }
 }
+
+#map{ 
+  height:40vh; width:80%;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
 .ayo{
-  background-color:whitesmoke;
+  background-color:white;
 }
 
 #ireland{
-  margin:10px;
+  margin:5px;
+  background-color: lavender;
+  text-align: left;
+  padding:5px;
+  
 }
-#ireland:active{
-  transform: rotate(left);
-  background-color: aqua;
+
+#ireland > p{
+ display: none;
+
 }
+
+#ireland:hover > p{
+  display: block;
+  width:inherit;
+  height: inherit;
+  color:gold;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-style: normal;
+  font-weight: bolder;
+  transform: scale(1);
+  transition:transform 5s;
+}
+
+#family{
+  margin:5px;
+  background-color: lavender;
+  text-align: left;
+  padding:5px;
+  min-height: inherit;
+  width:inherit;
+  
+}
+
+#family > p{
+ display: none;
+
+}
+
+#family:hover > p{
+  display: block;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-style: normal;
+  font-weight: bolder;
+  transform: scale(1);
+  transition:transform 5s;
+  color:gold;
+
+}
+#work{
+  margin:20px;
+  background-color: lavender;
+  text-align: left;
+  padding:5px;
+  width:inherit;
+  height: inherit;
+
+  
+}
+
+#work > p{
+ display: none;
+
+}
+
+#work:hover > p{
+  display: block;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-style: normal;
+  font-weight: bolder;
+  transform: scale(1);
+  transition: transform 7s;
+  color:gold;
+ }
+
+
 
 #submit{
-  background-color: whitesmoke;
+  background-color:lightskyblue;
 	color:black;
-	border:1px solid whitesmoke;
+	border:1px solid lightskyblue;
 	border-radius:5px;
-	padding:5px;
-	font-size:15px;
-
+  padding:5px;
+  height: 30px;
+  font-size:15px;
+}
+#submit:hover{
+  transform: scale(.5);
+  transition: transform 5s;
 }
  fieldset{
 	border:1px solid royalblue;
@@ -167,19 +248,6 @@ legend{
 
 	font-size: 22px;
 }
-textarea{
-	width:60%;
-}
-input{
-  width:60%;
-  height: 5vh;
-
-}
-input:focus{
-  box-shadow:0px 0px 2px 2px grey; 
-}
-
-
 .memoir {
   background-color:whitesmoke;
   padding:10px;
@@ -195,4 +263,40 @@ input:focus{
 }
 .isale a{
   display: inline-block;
+}
+p#success{
+  border:1px solid green;
+  width:50%;
+  display:none;
+  padding: 5px;
+}
+p#error{
+  border:1px solid red;
+  width:50%;
+  display:none;
+  padding:5px;
+}
+
+#contactForm textarea, #contactForm input{
+  border: 1px solid royalblue;
+  padding: 5px;
+  width:90%;
+  
+	
+}
+
+#contactForm textarea{
+  min-height:150px;
+}
+
+#contactForm input{
+  min-height:10px;
+}
+
+#contactForm input:focus{
+  box-shadow:0px 0px 2px 2px gray;
+  background-color:whitesmoke;
+}
+#adeayo{
+  color:grey;
 }
